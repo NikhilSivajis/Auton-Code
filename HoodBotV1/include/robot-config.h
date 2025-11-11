@@ -1,0 +1,25 @@
+using namespace vex;
+
+extern brain Brain;
+
+//To set up a motor called LeftFront here, you'd use
+//extern motor LeftFront;
+
+//Add your devices below, and don't forget to do the same in robot-config.cpp:
+extern motor LeftFront;
+extern motor LeftBack;
+extern motor LeftMiddle;
+extern motor RightFront;
+extern motor RightBack;
+extern motor RightMiddle;
+
+//Intake
+extern motor IntakeBottom;
+extern motor IntakeTop;
+
+
+extern digital_out descore;
+extern digital_out littlewill;
+
+
+void  vexcodeInit( void );
