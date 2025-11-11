@@ -149,28 +149,28 @@ void matchload_left()
 
 void four_left()
 {
-  odom_constants();
+
+   odom_constants();
   chassis.set_coordinates(0, 0, 0);
   //Intake Setting
   IntakeBottom.setVelocity(100, percent);
   IntakeTop.setVelocity(100, percent);
   
   IntakeBottom.spin(forward);
-  chassis.drive_distance(25);
-  chassis.turn_to_angle(-25);
+  chassis.drive_distance(55);
+  chassis.turn_to_angle(-20);
 
-  //chassis.drive_max_voltage = 6;
+  chassis.drive_max_voltage = 6;
   chassis.drive_distance(10);
    wait(100, msec);
-  chassis.drive_distance(10);
-
+   chassis.drive_distance(10);
 
   //7default_constants();
   chassis.turn_to_angle(-115);
-  chassis.drive_distance(60);
+  chassis.drive_distance(40);
 
   chassis.turn_to_angle(-180);
-  chassis.drive_distance(-35);
+  chassis.drive_distance(-20);
 
   
   IntakeTop.spin(forward);
@@ -182,20 +182,23 @@ void four_left()
 
 void four_right()
 {
-  odom_constants();
+
+
+ odom_constants();
     chassis.set_coordinates(0, 0, 0);
   //Intake Setting
   IntakeBottom.setVelocity(100, percent);
   IntakeTop.setVelocity(100, percent);
   
   IntakeBottom.spin(forward);
-  chassis.drive_distance(25);
+  chassis.drive_distance(55);
   chassis.turn_to_angle(25);
 
   //chassis.drive_max_voltage = 6;
   chassis.drive_distance(10);
   wait(100, msec);
   chassis.drive_distance(10);
+
 
   //7default_constants();
   chassis.turn_to_angle(115);
@@ -206,7 +209,7 @@ void four_right()
 
   
   IntakeTop.spin(forward);
-}
+ }
 
 void  matchload_right()
 {
@@ -217,7 +220,7 @@ void  matchload_right()
   IntakeTop.setVelocity(100, percent);
   
   IntakeBottom.spin(forward);
-  chassis.drive_distance(25);
+  chassis.drive_distance(55);
   chassis.turn_to_angle(25);
 
   //chassis.drive_max_voltage = 6;
@@ -232,12 +235,13 @@ void  matchload_right()
   chassis.turn_to_angle(180);
   chassis.drive_distance(-35);
   
+
   wait(300, msec);
   IntakeTop.spin(forward);
   
   //matchloading part
 
-  wait(3000, msec);
+  wait(1000, msec);
 
   littlewill.set(true);
   IntakeTop.stop();
@@ -246,7 +250,7 @@ void  matchload_right()
 
   chassis.drive_distance(60);
 
-  wait(500,msec);
+  wait(100,msec);
 
   chassis.turn_to_angle(185);
 

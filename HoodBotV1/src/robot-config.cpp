@@ -15,11 +15,11 @@ motor LeftBack = motor(PORT19, ratio6_1, true);
 motor LeftMiddle = motor(PORT20, ratio6_1, true);
 motor RightFront = motor(PORT8, ratio6_1, false);
 motor RightBack = motor(PORT9, ratio6_1, false);
-motor RightMiddle = motor(PORT10, ratio6_1, false);
+motor RightMiddle = motor(PORT21, ratio6_1, false);
 
 //Intake
 motor IntakeBottom = motor(PORT5, ratio6_1, false);
-motor IntakeTop = motor(PORT4, ratio6_1, false);
+motor IntakeTop = motor(PORT4, ratio6_1, true);
 
 //Pneumatics
 digital_out descore = digital_out(Brain.ThreeWirePort.C);
