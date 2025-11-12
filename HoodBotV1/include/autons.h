@@ -31,7 +31,7 @@ void six_right();
 void middle_one();
 
 
-
+void drive_to_point_test();
 
 //Long and Middle Goal Auton
 

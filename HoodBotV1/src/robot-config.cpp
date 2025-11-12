@@ -19,7 +19,7 @@ motor RightMiddle = motor(PORT21, ratio6_1, false);
 
 //Intake
 motor IntakeBottom = motor(PORT5, ratio6_1, false);
-motor IntakeTop = motor(PORT4, ratio6_1, true);
+motor IntakeTop = motor(PORT4, ratio6_1, false);
 
 //Pneumatics
 digital_out descore = digital_out(Brain.ThreeWirePort.C);
