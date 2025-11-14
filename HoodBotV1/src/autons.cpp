@@ -129,7 +129,9 @@ void holonomic_odom_test(){
 }
 
 
-void matchload_left()
+//Odom Autons
+
+void four_right()
 {
   odom_constants();
   chassis.set_coordinates(0, 0, 0);
@@ -138,49 +140,96 @@ void matchload_left()
   IntakeTop.setVelocity(100, percent);
   
   IntakeBottom.spin(forward);
-  chassis.drive_distance(25);
-  chassis.turn_to_angle(-25);
-  chassis.drive_distance(10);
 
+  chassis.turn_to_point(0, 25);
+  
 
 }
 
 
 
-void four_left()
-{
+//No-Odom Auton
 
-   odom_constants();
-  chassis.set_coordinates(0, 0, 0);
+void six_ball_no_odom_right()
+{
+ 
+  odom_constants();
+    chassis.set_coordinates(0, 0, 0);
   //Intake Setting
   IntakeBottom.setVelocity(100, percent);
   IntakeTop.setVelocity(100, percent);
   
   IntakeBottom.spin(forward);
-  chassis.drive_distance(55);
-  chassis.turn_to_angle(-20);
+   chassis.drive_max_voltage = 6;
 
-  chassis.drive_max_voltage = 6;
-  chassis.drive_distance(10);
-   wait(100, msec);
-   chassis.drive_distance(10);
+  chassis.drive_distance(50);
+  chassis.turn_to_angle(25);
 
-  //7default_constants();
-  chassis.turn_to_angle(-115);
-  chassis.drive_distance(40);
+  //chassis.drive_max_voltage = 6;
+  // chassis.drive_distance(10);
+  // wait(100, msec);
+  // chassis.drive_distance(10);
 
-  chassis.turn_to_angle(-180);
-  chassis.drive_distance(-20);
+ littlewill.set(true);
 
-  
-  IntakeTop.spin(forward);
+  chassis.drive_distance(20);
+
+  littlewill.set(false);
+
+
+  chassis.turn_to_angle(55);
+
+  chassis.drive_distance(25);
+  littlewill.set(true);
+  chassis.drive_distance(-30);
+
+}
+
+
+void no_odom_four_left()
+{
+    odom_constants();
+    chassis.set_coordinates(0, 0, 0);
+    //Intake Setting
+    IntakeBottom.setVelocity(80, percent);
+    IntakeTop.setVelocity(100, percent);
+    
+    IntakeBottom.spin(forward);
+    chassis.drive_max_voltage = 6;
+
+    chassis.drive_distance(50);
+    chassis.turn_to_angle(-25);
+
+    //chassis.drive_max_voltage = 6;
+    // chassis.drive_distance(10);
+    // wait(100, msec);
+    // chassis.drive_distance(10);
+
+  littlewill.set(true);
+
+    chassis.drive_distance(20);
+
+    littlewill.set(false);
+
+
+      /*Bottom Part is inconsistent*/
+
+    //7default_constants();
+    chassis.turn_to_angle(-115);
+    chassis.drive_distance(50);
+
+    chassis.turn_to_angle(180);
+    chassis.drive_distance(-20);
+
+    
+    IntakeTop.spin(forward);
 
 
 
 
 }
 
-void four_right()
+void no_odom_four_right()
 {
 
 
@@ -191,27 +240,37 @@ void four_right()
   IntakeTop.setVelocity(100, percent);
   
   IntakeBottom.spin(forward);
-  chassis.drive_distance(55);
+   chassis.drive_max_voltage = 6;
+
+  chassis.drive_distance(50);
   chassis.turn_to_angle(25);
 
   //chassis.drive_max_voltage = 6;
-  chassis.drive_distance(10);
-  wait(100, msec);
-  chassis.drive_distance(10);
+  // chassis.drive_distance(10);
+  // wait(100, msec);
+  // chassis.drive_distance(10);
+
+ littlewill.set(true);
+
+  chassis.drive_distance(20);
+
+  littlewill.set(false);
+
+
 
 
   //7default_constants();
   chassis.turn_to_angle(115);
-  chassis.drive_distance(55);
+  chassis.drive_distance(50);
 
   chassis.turn_to_angle(180);
-  chassis.drive_distance(-35);
+  chassis.drive_distance(-20);
 
   
   IntakeTop.spin(forward);
  }
 
-void  matchload_right()
+void  no_odom_matchload_right()
 {
   odom_constants();
     chassis.set_coordinates(0, 0, 0);
@@ -280,73 +339,6 @@ void  matchload_right()
 
   
 }
-
-void six_right()//Work in Progress
-{
-   odom_constants();
-    chassis.set_coordinates(0, 0, 0);
-  //Intake Setting
-  IntakeBottom.setVelocity(100, percent);
-  IntakeTop.setVelocity(100, percent);
-  
-  IntakeBottom.spin(forward);
-  chassis.drive_distance(25);
-  chassis.turn_to_angle(25);
-
-  //chassis.drive_max_voltage = 6;
-  chassis.drive_distance(10);
-  wait(100, msec);
-  chassis.drive_distance(10);
-
-
-  chassis.turn_to_angle(45);
-  chassis.drive_distance(60);
-
-}
-
-void middle_one()
-{
-   odom_constants();
-  chassis.set_coordinates(0, 0, 0);
-  //Intake Setting
-  IntakeBottom.setVelocity(100, percent);
-  IntakeTop.setVelocity(100, percent);
-  
-  IntakeBottom.spin(forward);
-  chassis.drive_distance(25);
-  chassis.turn_to_angle(-25);
-
-  //chassis.drive_max_voltage = 6;
-  chassis.drive_distance(10);
-   wait(100, msec);
-  chassis.drive_distance(20);
-
-  chassis.turn_to_angle(-135);
-
-  chassis.drive_distance(-30);
-
-  IntakeTop.spin(forward);
-  wait(200, msec);
-
-  IntakeTop.stop();
-
-  chassis.drive_distance(80);
-
-   chassis.turn_to_angle(180);
-  chassis.drive_distance(-35);
-
-  
-  IntakeTop.spin(forward);
-
-
-
-  
-
-
-
-
-}
-
 
 
 void drive_to_point_test(){

@@ -18,20 +18,22 @@ void holonomic_odom_test();
 //Auton functions
 
 //One Long Goal Autons
-void four_left();//Done
-void four_right();//Done
-void matchload_left();
-void matchload_right();
-void seven_left();
-void seven_right();
-void nine_left();
-void nine_right();
-void six_left();
-void six_right();
-void middle_one();
+
+//No-Odom
+
+    void no_odom_four_left();//Done
+    void no_odom_four_right();//Done
+    void no_odom_matchload_left();
+    void no_odom_matchload_right();
+
+    void six_ball_no_odom_left();
+    void six_ball_no_odom_right();
+
 
 
 void drive_to_point_test();
+
+void four_right();
 
 //Long and Middle Goal Auton
 
